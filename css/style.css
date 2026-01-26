@@ -1,0 +1,75 @@
+/* Global reset to ensure consistent sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Define variables at the top of your file */
+:root {
+    --primary-color: #1db954;
+    --bg-color: #f4f4f4;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+/* Card container using the Box Model */
+.song-card {
+    width: 300px;
+    background-color: var(--bg-color);
+    box-shadow: var(--card-shadow);
+    border: 2px solid #ddd; /* Border */
+    padding: 20px;          /* Inner spacing */
+    margin: 50px auto;      /* Outer spacing - centers the card */
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* When the screen is 480px or less (Smartphones) */
+@media (max-width: 480px) {
+    .song-card {
+        width: 90%;      /* Take almost full width */
+        margin: 20px auto; 
+        padding: 10px;
+        background-color: var(--bg-color);
+        box-shadow: var(--card-shadow);
+    }
+    
+    .song-card img {
+        border-radius: 0; /* Maybe remove rounded corners on mobile */
+    }
+}
+
+/* Specific styling for the active track using an ID */
+#current-track {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-color: #1db954; /* Spotify-style green */
+}
+
+
+/* Button styling */
+.btn-play {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;    /* Vertical and horizontal padding */
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;      /* Space above the button */
+    transition: 0.3s;
+}
+
+.btn-play:hover {
+    background-color: #1aa34a;
+    transform: scale(1.05); /* Slight scale up on hover */
+}
+
+
+/* Styling the image directly */
+.song-card img {
+    width: 200px;  /* Set width */
+    height: 200px; /* Set height */
+    
+    /* Important: This prevents the image from stretching/squashing 
+       if the original file isn't a perfect square */
+    object-fit: cover; 
+    
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
