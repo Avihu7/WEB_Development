@@ -7,17 +7,59 @@
 </head>
 <body>
 
-<h2>חיפוש סרטונים</h2>
+<header>
+    <h1 id="welcome"></h1>
+</header>
 
-<p id="welcome"></p>
+<main>
 
-<input type="text" id="searchInput" placeholder="חפש סרטון או זמר">
-<button id="searchBtn">חפש</button>
+    <!-- חיפוש -->
+    <section id="searchSection">
+        <input type="text" id="searchInput" placeholder="חפש סרטון או זמר">
+        <button id="searchBtn">חפש</button>
+    </section>
 
-<div id="results"></div>
+    <!-- תוצאות -->
+    <section id="results" class="results-grid">
+        <!-- כרטיסיות סרטונים -->
+    </section>
 
-<script src="js/search.js"></script>
+</main>
+
+<!-- Modal ניגון -->
+<div id="videoModal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal">×</span>
+        <iframe id="videoFrame" width="560" height="315" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Modal הוספה למועדפים -->
+<div id="favoriteModal" class="modal hidden">
+    <div class="modal-content">
+        <h3>הוספה למועדפים</h3>
+
+        <label>בחר Playlist קיים:</label>
+        <select id="playlistSelect"></select>
+
+        <p>או</p>
+
+        <button id="createPlaylistBtn">צור Playlist חדש</button>
+
+        <br><br>
+        <button id="confirmAddBtn">הוסף</button>
+        <button id="cancelAddBtn">ביטול</button>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast hidden">
+    הסרטון נוסף לרשימה
+    <a href="playlists.html">מעבר מהיר</a>
+</div>
+
 <script src="js/storage.js"></script>
+<script src="js/search.js"></script>
 
 </body>
 </html>
