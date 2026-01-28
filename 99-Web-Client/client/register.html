@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <h2>הרשמה</h2>
+
+    <form id="registerForm" class="auth-form" autocomplete="off">
+
+        <div class="form-group">
+            <label for="username">שם משתמש *</label>
+            <input type="text" id="username" name="username" placeholder="שם משתמש" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">סיסמה *</label>
+            <input type="password" id="password" name="password" placeholder="סיסמה (לפחות 6 תווים, אות אחת וספרה אחת)" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passwordConfirm">אימות סיסמה *</label>
+            <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="אימות סיסמה" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">אימייל *</label>
+            <input type="email" id="email" name="email" placeholder="אימייל" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fullName">שם מלא *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="שם מלא" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image">קישור לתמונה *</label>
+            <input type="url" id="image" name="image" placeholder="קישור לתמונת פרופיל" required>
+        </div>
+
+        <button type="submit">הרשמה</button>
+
+    </form>
+
+    <p class="auth-link">כבר רשום? <a href="login.html">התחבר</a></p>
+</div>
+
+<script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

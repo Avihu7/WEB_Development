@@ -45,9 +45,9 @@ router.post("/playlists", requireAuth, (req, res) => {
   return res.json({ ok: true, playlist: newPlaylist });
 });
 
-// POST /api/playlists/:id/videos  { videoId, title }
+// POST /api/playlists/:id/videos  { videoId, title, thumbnail, channelTitle, viewCount, duration }
 router.post("/playlists/:id/videos", requireAuth, (req, res) => {
-  const { videoId, title } = req.body;
+  const { videoId, title, thumbnail, channelTitle, viewCount, duration } = req.body;
   const playlistId = req.params.id;
 
   if (!videoId) return res.status(400).json({ ok: false, message: "Missing videoId" });
@@ -61,7 +61,16 @@ router.post("/playlists/:id/videos", requireAuth, (req, res) => {
 
   if (!pl.videos) pl.videos = [];
   const exists = pl.videos.some(v => v.videoId === videoId);
-  if (!exists) pl.videos.push({ videoId, title: title || "" });
+  if (!exists) {
+    pl.videos.push({
+      videoId,
+      title: title || "",
+      thumbnail: thumbnail || "",
+      channelTitle: channelTitle || "",
+      viewCount: viewCount || 0,
+      duration: duration || ""
+    });
+  }
 
   writeDB(db);
   return res.json({ ok: true });

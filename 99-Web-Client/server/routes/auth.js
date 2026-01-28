@@ -16,23 +16,25 @@ function writeDB(db) {
 }
 
 function passwordValid(pw) {
+  // Password must be at least 6 chars, contain at least 1 letter and 1 digit
   return (
     typeof pw === "string" &&
     pw.length >= 6 &&
-    /\d/.test(pw) &&
-    /\W/.test(pw)
+    /[a-zA-Z]/.test(pw) &&
+    /\d/.test(pw)
   );
 }
 
 // POST /api/register
 router.post("/register", (req, res) => {
-  const { username, email, age, password, image, firstName } = req.body;
+  const { username, email, password, image, fullName } = req.body;
 
-  if (!username || !email || !age || !password) {
+  // All fields are required
+  if (!username || !email || !password || !fullName || !image) {
     return res.status(400).json({ ok: false, message: "Missing required fields" });
   }
   if (!passwordValid(password)) {
-    return res.status(400).json({ ok: false, message: "Weak password" });
+    return res.status(400).json({ ok: false, message: "Password must be at least 6 characters with at least 1 letter and 1 digit" });
   }
 
   const db = readDB();
@@ -42,11 +44,10 @@ router.post("/register", (req, res) => {
 
   db.users.push({
     username,
-    firstName: firstName || "",
+    fullName,
     email,
-    age,
-    password, // (ללא הצפנה לפי שלב זה)
-    image: image || "",
+    password, // (no encryption for Phase A)
+    image,
     playlists: [],
   });
 
@@ -91,10 +92,9 @@ router.get("/me", (req, res) => {
     ok: true,
     user: {
       username: user.username,
-      firstName: user.firstName,
+      fullName: user.fullName || user.firstName || "",
       image: user.image || "",
-      email: user.email,
-      age: user.age
+      email: user.email
     }
   });
 });

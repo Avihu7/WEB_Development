@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div id="welcome"></div>
+    <button id="logoutBtn">התנתק</button>
+</header>
+
+<h2>חיפוש סרטונים</h2>
+
+<section class="search-row">
+    <input type="text" id="searchInput" placeholder="חפש סרטון או זמר">
+    <button id="searchBtn">חפש</button>
+</section>
+
+<div id="results" class="results-grid"></div>
+
+<!-- VIDEO PLAYBACK MODAL -->
+<div id="videoModal" class="modal hidden">
+    <div class="modal-content video-modal-content">
+        <button id="modalClose" class="modal-close">✕</button>
+        <div class="modal-body video-modal-body">
+            <div class="modal-player">
+                <iframe id="videoPlayer"
+                    src=""
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalChannel"></p>
+                <p id="modalViews"></p>
+                <p id="modalDuration"></p>
+                <div class="modal-actions">
+                    <button id="addToFavBtn">הוסף למועדפים</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ADD TO FAVORITES MODAL -->
+<div id="addToFavModal" class="modal hidden">
+    <div class="modal-content fav-modal-content">
+        <button id="favModalClose" class="modal-close">✕</button>
+        <h3>הוספה למועדפים</h3>
+        <div class="fav-modal-body">
+            <div class="fav-option">
+                <label>
+                    <input type="radio" name="favOption" value="existing" checked>
+                    בחר פלייליסט קיים
+                </label>
+                <select id="playlistSelect" class="playlist-dropdown">
+                    <option value="">-- בחר פלייליסט --</option>
+                </select>
+            </div>
+            <div class="fav-option">
+                <label>
+                    <input type="radio" name="favOption" value="new">
+                    צור פלייליסט חדש
+                </label>
+                <input type="text" id="newPlaylistName" placeholder="שם הפלייליסט החדש" disabled>
+            </div>
+            <button id="confirmAddFav" class="confirm-btn">הוסף</button>
+        </div>
+    </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast hidden">
+    <span id="toastMessage"></span>
+    <a id="toastLink" href="playlists.html" class="toast-link hidden">עבור לפלייליסטים</a>
+</div>
+
+<script type="module" src="js/search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlists</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div id="welcome"></div>
+    <button id="logoutBtn">התנתק</button>
+</header>
+
+<h2>הספרייה שלי</h2>
+
+<div class="playlists-container">
+    <aside class="playlists-sidebar">
+        <h3>פלייליסטים</h3>
+        <button id="newPlaylistBtn" class="new-playlist-btn">+ פלייליסט חדש</button>
+        <ul id="playlistList"></ul>
+    </aside>
+
+    <main class="playlists-main">
+        <div class="main-header">
+            <h3 id="playlistTitle">סרטונים</h3>
+        </div>
+        <div id="videos" class="videos-container"></div>
+    </main>
+</div>
+
+<!-- CREATE PLAYLIST MODAL -->
+<div id="createPlaylistModal" class="modal hidden">
+    <div class="modal-content create-playlist-modal">
+        <button id="createModalClose" class="modal-close">✕</button>
+        <h3>יצירת פלייליסט חדש</h3>
+        <div class="create-playlist-body">
+            <input type="text" id="newPlaylistInput" placeholder="שם הפלייליסט">
+            <button id="confirmCreatePlaylist" class="confirm-btn">צור פלייליסט</button>
+        </div>
+    </div>
+</div>
+
+<!-- VIDEO PLAYBACK MODAL -->
+<div id="videoModal" class="modal hidden">
+    <div class="modal-content video-modal-content">
+        <button id="modalClose" class="modal-close">✕</button>
+        <div class="modal-body video-modal-body">
+            <div class="modal-player">
+                <iframe id="videoPlayer"
+                    src=""
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <button id="removeVideoBtn" class="remove-video-btn">הסר מהפלייליסט</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/playlists.js"></script>
+
+</body>
+</html>
