@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "username": "aviadben",
+      "firstName": "Aviad",
+      "email": "avihubenita@gmail.com",
+      "age": "28",
+      "password": "6959947Aa!",
+      "image": "https://cdn-icons-png.freepik.com/512/6901/6901028.png",
+      "playlists": [
+        {
+          "id": "1769599384525",
+          "name": "benita-playlist",
+          "videos": [
+            {
+              "videoId": "Fpn1imb9qZg",
+              "title": "Coldplay - A Sky Full Of Stars (Live at River Plate)"
+            },
+            {
+              "videoId": "QtXby3twMmI",
+              "title": "Coldplay - Adventure Of A Lifetime (Official Video)"
+            },
+            {
+              "videoId": "1G4isv_Fylg",
+              "title": "Coldplay - Paradise (Official Video)"
+            },
+            {
+              "videoId": "k4V3Mo61fJM",
+              "title": "Coldplay - Fix You (Official Video)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
