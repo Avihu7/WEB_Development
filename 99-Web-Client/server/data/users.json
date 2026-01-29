@@ -31,6 +31,152 @@
           ]
         }
       ]
+    },
+    {
+      "username": "aviad7",
+      "fullName": "Aviad Benita",
+      "email": "avihubenita@gmail.com",
+      "password": "AvihuBe12",
+      "image": "https://img.freepik.com/premium-vector/person-with-blue-shirt-that-says-name-person_1029948-7040.jpg",
+      "playlists": [
+        {
+          "id": "1769699582484",
+          "name": "Avihu_Playlist",
+          "videos": [
+            {
+              "videoId": "Pgmx7z49OEk",
+              "title": "Jennifer Lopez - Ain&#39;t Your Mama (Official Video)",
+              "thumbnail": "https://i.ytimg.com/vi/Pgmx7z49OEk/mqdefault.jpg",
+              "channelTitle": "JenniferLopezVEVO",
+              "viewCount": 929347151,
+              "duration": "5:09"
+            },
+            {
+              "videoId": "A1kuaEuLX78",
+              "title": "Jennifer Lopez &amp; Maluma – Pa&#39; Ti + Lonely (Official Video)",
+              "thumbnail": "https://i.ytimg.com/vi/A1kuaEuLX78/mqdefault.jpg",
+              "channelTitle": "Jennifer Lopez",
+              "viewCount": 240848320,
+              "duration": "8:57"
+            },
+            {
+              "videoId": "lYfkl-HXfuU",
+              "title": "Jennifer Lopez - If You Had My Love (Official Video)",
+              "thumbnail": "https://i.ytimg.com/vi/lYfkl-HXfuU/mqdefault.jpg",
+              "channelTitle": "JenniferLopezVEVO",
+              "viewCount": 208736712,
+              "duration": "5:30"
+            }
+          ]
+        },
+        {
+          "id": "1769702080543",
+          "name": "Playlist2",
+          "videos": [
+            {
+              "videoId": "GeFs8nv8C_o",
+              "title": "Subliminal - Let The Music Talk (Afro Trap) סאבלימינל - תן למוזיקה לדבר | קליפ רשמי",
+              "thumbnail": "https://i.ytimg.com/vi/GeFs8nv8C_o/mqdefault.jpg",
+              "channelTitle": "SubliminalOfficial",
+              "viewCount": 36729113,
+              "duration": "4:57"
+            },
+            {
+              "videoId": "Z760vU8ezg4",
+              "title": "סאבלימינל והצל - הפינאלי - Subliminal",
+              "thumbnail": "https://i.ytimg.com/vi/Z760vU8ezg4/mqdefault.jpg",
+              "channelTitle": "SubliminalOfficial",
+              "viewCount": 2621184,
+              "duration": "3:51"
+            },
+            {
+              "videoId": "EMBHqjXqGQ8",
+              "title": "סאבלימינל והצל - אני יכול - Subliminal",
+              "thumbnail": "https://i.ytimg.com/vi/EMBHqjXqGQ8/mqdefault.jpg",
+              "channelTitle": "SubliminalOfficial",
+              "viewCount": 1492639,
+              "duration": "3:58"
+            },
+            {
+              "videoId": "ea7ZWzdBswc",
+              "title": "נינט טייב Ninet Tayeb - היא יודעת - קליפ",
+              "thumbnail": "https://i.ytimg.com/vi/ea7ZWzdBswc/mqdefault.jpg",
+              "channelTitle": "Helicon Music - הליקון",
+              "viewCount": 4169331,
+              "duration": "3:07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "username": "aviadbenita",
+      "fullName": "Aviad Benita",
+      "email": "avihubenita@gmail.com",
+      "password": "6959947a",
+      "image": "https://i.sstatic.net/l60Hf.png",
+      "playlists": [
+        {
+          "id": "1769702388918",
+          "name": "אביעד פלייליסט",
+          "videos": [
+            {
+              "videoId": "L5WSsFFElvw",
+              "title": "עומר אדם – תהום (Prod.by Guy Dan &amp; Shrek &amp; Tzukush)",
+              "thumbnail": "https://i.ytimg.com/vi/L5WSsFFElvw/mqdefault.jpg",
+              "channelTitle": "עומר אדם - הערוץ הרשמי",
+              "viewCount": 22611756,
+              "duration": "3:06"
+            },
+            {
+              "videoId": "Hq1XJbrXvg4",
+              "title": "עומר אדם - מאמי זה נגמר",
+              "thumbnail": "https://i.ytimg.com/vi/Hq1XJbrXvg4/mqdefault.jpg",
+              "channelTitle": "עומר אדם - הערוץ הרשמי",
+              "viewCount": 23123183,
+              "duration": "4:14"
+            },
+            {
+              "videoId": "lkPRL1YJq6E",
+              "title": "מועדון הקצב של אביהו פנחסוב - בבון של יפו (הקליפ הרשמי)",
+              "thumbnail": "https://i.ytimg.com/vi/lkPRL1YJq6E/mqdefault.jpg",
+              "channelTitle": "מועדון הקצב של אביהו פנחסוב",
+              "viewCount": 329323,
+              "duration": "3:22"
+            },
+            {
+              "videoId": "0eo67fWCW2A",
+              "title": "טונה &amp; נינט - עולם משוגע - קיסריה אנפלאגד",
+              "thumbnail": "https://i.ytimg.com/vi/0eo67fWCW2A/mqdefault.jpg",
+              "channelTitle": "Tuna Official",
+              "viewCount": 2678265,
+              "duration": "5:35"
+            },
+            {
+              "videoId": "gnIZ7RMuLpU",
+              "title": "Coldplay - In My Place (Official 4K Video)",
+              "thumbnail": "https://i.ytimg.com/vi/gnIZ7RMuLpU/mqdefault.jpg",
+              "channelTitle": "Coldplay",
+              "viewCount": 312303155,
+              "duration": "3:47"
+            }
+          ]
+        },
+        {
+          "id": "1769702476519",
+          "name": "בניטה",
+          "videos": [
+            {
+              "videoId": "KTDPcuE6I-Y",
+              "title": "דודו טסה - פריד | Dudu Tassa - Farid",
+              "thumbnail": "https://i.ytimg.com/vi/KTDPcuE6I-Y/mqdefault.jpg",
+              "channelTitle": "דודו טסה",
+              "viewCount": 1877587,
+              "duration": "4:14"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

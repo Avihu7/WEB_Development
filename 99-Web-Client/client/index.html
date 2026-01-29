@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Client Web - Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <header class="home-header">
+        <h1>Client Web Project</h1>
+        <p>שם הסטודנט: אביעד בניטה | ת"ז: 209002815</p>
+    </header>
 
-<header class="home-header">
-    <h1>Client Web Project</h1>
-    <p>שם הסטודנט: אביעד בניטה | ת"ז: 209002815</p>
-</header>
+    <nav class="home-nav">
+        <!-- אזור למנותק -->
+        <div id="guestNav" style="display:none; gap:10px;">
+            <a href="login.html">התחברות</a>
+            <a href="register.html">הרשמה</a>
+            <a href="https://github.com/Avihu7" target="_blank" rel="noopener">GitHub</a>
+            <a href="YOUR_INTERNET_URL" target="_blank" rel="noopener">Internet URL</a>
 
-<nav class="home-nav">
-    <a href="index.html">בית</a>
-    <a href="login.html">התחברות</a>
-    <a href="register.html">הרשמה</a>
-    <a href="search.html">חיפוש</a>
-    <a href="playlists.html">פלייליסטים</a>
-    <a href="https://github.com/AviadBenita" target="_blank">GitHub</a>
-    <a href="https://aviadbenita.github.io/webclient" target="_blank">Internet URL</a>
-</nav>
+        </div>
 
-<main class="home-main">
-    <h2>ברוכים הבאים</h2>
-    <p>זהו דף הבית של פרויקט Client Web - שלב א'.</p>
-    <p>השתמשו בתפריט הניווט למעלה כדי להתחבר או להירשם.</p>
-</main>
+        <!-- אזור למחובר -->
+        <div id="userNav" style="display:none; gap:10px; align-items:center;">
+            <a href="index.html">בית</a>
+            <a href="search.html">חיפוש</a>
+            <a href="playlists.html">פלייליסטים</a>
+            <a href="https://github.com/Avihu7" target="_blank" rel="noopener">GitHub</a>
+            <a href="YOUR_INTERNET_URL" target="_blank" rel="noopener">Internet URL</a>
+            <button id="logoutBtn" type="button">התנתקות</button>
+            <span id="helloUser" style="font-weight:600;"></span>
+        </div>
 
-<footer class="home-footer">
-    <p>Client Web © 2026</p>
-</footer>
+    </nav>
 
+    <main class="home-main">
+        <h2>ברוכים הבאים</h2>
+        <p>זהו דף הבית של פרויקט Client Web - שלב א'.</p>
+    </main>
+
+    <footer class="home-footer">
+        <p>Client Web © 2026</p>
+    </footer>
+
+    <script>
+        // 1) קרא את המשתמש מה-SessionStorage
+        const currentUser = sessionStorage.getItem("currentUser");
+
+        const guestNav = document.getElementById("guestNav");
+        const userNav = document.getElementById("userNav");
+        const helloUser = document.getElementById("helloUser");
+        const logoutBtn = document.getElementById("logoutBtn");
+
+        // 2) הצג את התפריט המתאים
+        if (currentUser) {
+            // אצלך זה נשמר כמחרוזת "aviad7"
+            helloUser.textContent = `שלום ${currentUser}`;
+            userNav.style.display = "flex";
+            guestNav.style.display = "none";
+        } else {
+            guestNav.style.display = "flex";
+            userNav.style.display = "none";
+        }
+
+        // 3) התנתקות: מחיקת session והעברה ללוגין
+        logoutBtn?.addEventListener("click", () => {
+            sessionStorage.removeItem("currentUser");
+            window.location.href = "login.html";
+        });
+    </script>
 </body>
+
 </html>

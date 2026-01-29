@@ -768,3 +768,25 @@ h2 {
         width: 95vw;
     }
 }
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-links a {
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  background: rgba(255,255,255,0.4);
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.35);
+}
