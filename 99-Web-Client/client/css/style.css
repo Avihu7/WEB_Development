@@ -246,19 +246,29 @@ h2 {
     object-fit: cover;
 }
 
+/* ---- 2-line clamp WITHOUT -webkit props (prevents VSCode warnings) ---- */
 .video-card h4,
 .video-title {
     margin: 12px 12px 8px;
     line-height: 1.4;
     font-size: 14px;
     color: #333;
-    /* 2-line clamp with ellipsis */
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+
+    position: relative;
+    display: block;
     overflow: hidden;
-    text-overflow: ellipsis;
-    height: 2.8em;
+    max-height: 2.8em; /* 2 lines * 1.4em */
+    padding-left: 18px; /* space for the ellipsis overlay */
+}
+
+.video-card h4::after,
+.video-title::after {
+    content: "…";
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    padding: 0 2px;
+    background: linear-gradient(to left, rgba(255,255,255,0), #fff 70%);
 }
 
 .video-card p,
@@ -310,7 +320,6 @@ h2 {
     border-radius: 12px;
     padding: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    height: fit-content;
 }
 
 .playlists-sidebar h3 {
@@ -427,14 +436,26 @@ h2 {
     padding: 12px;
 }
 
+/* same clamp logic for playlist cards (background differs) */
 .playlist-video-card .video-title {
     margin: 0 0 4px;
     font-size: 14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    line-height: 1.4;
+
+    position: relative;
+    display: block;
     overflow: hidden;
-    height: auto;
+    max-height: 2.8em;
+    padding-left: 18px;
+}
+
+.playlist-video-card .video-title::after {
+    content: "…";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 2px;
+    background: linear-gradient(to left, rgba(248,248,248,0), #f8f8f8 70%);
 }
 
 .playlist-video-card .video-channel {
